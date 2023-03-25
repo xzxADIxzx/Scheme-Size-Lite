@@ -27,7 +27,7 @@ public class Main extends Mod {
         ClajIntegration.load();
         SchemeVars.load();
 
-        // ui.schematics = schemas;
+        ui.schematics = schemas;
         if (m_schematics.requiresDialog) ui.showOkText("@rename.name", "@rename.text", () -> {});
     }
 

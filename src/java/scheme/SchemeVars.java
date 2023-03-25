@@ -1,6 +1,7 @@
 package scheme;
 
 import arc.struct.Seq;
+import scheme.dialogs.*;
 import scheme.moded.ModedSchematics;
 
 public class SchemeVars {
@@ -8,6 +9,8 @@ public class SchemeVars {
     public static final String subtitle = "I am using Scheme Size [accent]Lite[] btw";
 
     public static ModedSchematics m_schematics;
+
+    public static SchemasDialog schemas;
 
     public static Seq<String> clajURLs = Seq.with(
             "darkdustry.net:3917",
@@ -20,5 +23,6 @@ public class SchemeVars {
             "91.209.226.11");
 
     public static void load() {
+        schemas = new SchemasDialog();
     }
 }
