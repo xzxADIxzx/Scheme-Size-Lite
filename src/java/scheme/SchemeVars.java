@@ -12,6 +12,7 @@ public class SchemeVars {
 
     public static SchemasDialog schemas;
     public static JoinViaClajDialog joinViaClaj;
+    public static ManageRoomsDialog manageRooms;
 
     public static Seq<String> clajURLs = Seq.with(
             "darkdustry.net:3917",
@@ -26,5 +27,6 @@ public class SchemeVars {
     public static void load() {
         schemas = new SchemasDialog();
         joinViaClaj = new JoinViaClajDialog();
+        manageRooms = new ManageRoomsDialog();
     }
 }
