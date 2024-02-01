@@ -15,9 +15,10 @@ public class SchemeVars {
     public static ManageRoomsDialog manageRooms;
 
     public static Seq<String> clajURLs = Seq.with(
-            "darkdustry.net:3917",
-            "45.82.176.157:3917",
-            "claj.phoenix-network.dev:4000");
+            "n3.xpdustry.com:7025",
+            "37.187.73.180:7025",
+            "claj.phoenix-network.dev:4000",
+            "167.235.159.121:4000");
 
     /** List of ip servers that block the mod. */
     public static Seq<String> antiModIPs = Seq.with(
