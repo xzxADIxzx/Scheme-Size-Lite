@@ -34,7 +34,7 @@ public class JoinViaClajDialog extends BaseDialog {
                 }
 
                 var link = ClajIntegration.parseLink(lastLink);
-                ClajIntegration.joinRoom(link.ip(), link.port(), link.key(), () -> {
+                ClajIntegration.joinRoom(link.ip, link.port, link.key, () -> {
                     ui.join.hide();
                     hide();
                 });

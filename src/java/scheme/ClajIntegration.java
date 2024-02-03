@@ -19,8 +19,6 @@ import static mindustry.Vars.*;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import com.github.bsideup.jabel.Desugar;
-
 /** https://github.com/xzxADIxzx/Scheme-Size/blob/main/src/java/scheme/ClajIntegration.java */
 public class ClajIntegration {
 
@@ -142,8 +140,17 @@ public class ClajIntegration {
         return new Link(link.substring(0, hash), link.substring(hash + 1, semicolon), port);
     }
 
-    @Desugar
-    public record Link(String key, String ip, int port) {}
+    public static class Link {
+
+        public final String key, ip;
+        public final int port;
+
+        public Link(String key, String ip, int port) {
+            this.key = key;
+            this.ip = ip;
+            this.port = port;
+        }
+    }
 
     public static class Serializer extends PacketSerializer {
 
