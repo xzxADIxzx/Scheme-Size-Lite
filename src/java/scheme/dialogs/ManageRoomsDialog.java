@@ -34,7 +34,7 @@ public class ManageRoomsDialog extends BaseDialog {
 
         cont.table(list -> {
             list.defaults().growX().padBottom(8f);
-            list.update(() -> list.getCells().filter(cell -> cell.get() != null)); // remove closed rooms
+            list.update(() -> list.getCells().removeAll(cell -> cell.get() == null)); // remove closed rooms
 
             this.list = list;
         }).row();
@@ -75,8 +75,8 @@ public class ManageRoomsDialog extends BaseDialog {
         root.row();
         root.button("@manage.name", Icon.planet, this::show).colspan(2).width(450f).disabled(button -> !net.server()).row();
 
-        int index = state.isCampaign() || state.isEditor() ? 5 : 7;
-        root.getCells().insert(index, root.getCells().remove(index + 1));
+        var buttons = root.getCells();
+        buttons.swap(buttons.size - 1, buttons.size - 2); // move the claj button above the quit button
     }
 
     // region URL

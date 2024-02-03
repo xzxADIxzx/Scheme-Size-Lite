@@ -29,7 +29,7 @@ public class ModedSchematics extends Schematics {
     /** Too large schematic file extension. */
     public static final String largeSchematicExtension = "mtls";
 
-    /** Copu paste from {@link Schematics}. */
+    /** Copy paste from {@link Schematics}. */
     public static final byte[] header = { 'm', 's', 'c', 'h' };
 
     /** Do need to show the dialog. */
@@ -43,7 +43,7 @@ public class ModedSchematics extends Schematics {
         for (Fi file : schematicDirectory.list()) fix(file);
     }
 
-    private void fix(Fi file) { // dont check size for mtls files
+    private void fix(Fi file) { // don't check size for mtls files
         if (!file.extension().equals(largeSchematicExtension) && !isTooLarge(file)) return;
 
         try {
